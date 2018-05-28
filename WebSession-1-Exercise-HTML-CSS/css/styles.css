@@ -2,28 +2,30 @@
 
 :root {
   /* Variables */
-  --main-font: 'Lato', sans-serif;
-  --title-font: 'Oswald', sans-serif;
-  --regular-font-size: 16px;
-  --medium-font-size: 20px;
-  --big-font-size: 60px;
-  --gigant-font-size: 80px;
-  --accent-color: #ff4c3d;
-  --white: #fff;
-  --black: #494c4f;
-  --black-a: #494c4faa;
-  --black-trans: #494c4f11;
+	--main-font: 'Lato', sans-serif;
+	--title-font: 'Oswald', sans-serif;
+	--regular-font-size: 16px;
+	--medium-font-size: 20px;
+	--large-font-size: 40px;
+	--big-font-size: 60px;
+	--gigant-font-size: 80px;
+	--accent-color: #ff4c3d;
+	--white: #fff;
+	--white-a: rgba(255,255,255,0.5);
+	--black: #494c4f;
+	--black-a: #494c4faa;
+	--black-trans: #494c4f11;
   /* Mixins */
-  --button: {
-    background-color: var(--button-bg, var(--accent-color));
-    color: var(--button-bg, var(--white));
-    border-radius: 75px;
+	--button: {
+	background-color: var(--button-bg, var(--accent-color));
+	color: var(--button-bg, var(--white));
+	border-radius: 75px;
   }
 }
 
 
 body {
-  font-family: var(--main-font);
+	font-family: var(--main-font);
 }
 
 h1,
@@ -32,131 +34,239 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--title-font);
+	font-family: var(--title-font);
 }
 
 .h1--big {
-  font-size: var(--big-font-size);
+	font-size: var(--big-font-size);
 }
 
 .h1--gigant {
-  font-size: var(--gigant-font-size);
+	font-size: var(--gigant-font-size);
 }
 
 .h1__shadow {
-  height: 100px;
+	height: 100px;
 }
 
 .h1__front {
-  height: 100%;
+	height: 100%;
 }
 
 .h1__back {
-  position: absolute;
-  top: 0;
-  text-align: center;
-  width: 100%;
-  color: var(--black-trans);
-  text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	font-size: var(--gigant-font-size);
+	width: 100%;
+	color: var(--black-trans);
+	text-transform: uppercase;
+}
+
+.h2--big {
+	font-size: var(--big-font-size);
+}
+
+.h2--white{
+	color: var(--white);
+}
+
+.h2--underline{
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.h2--underline::after{
+	content: '';
+	width: 20px;
+	height: 3px;
+	position: absolute;
+	left: -10%;
+	top:calc(200% + 20px);
+	background: var(--black-a);
 }
 
 .h3 {
-  color: var(--black);
-  font-size: var(--medium-font-size);
+	color: var(--black);
+	font-size: var(--medium-font-size);
 }
 
 .h3--underline {
-  margin-bottom: 20px;
-  position: relative;
+	margin-bottom: 20px;
+	position: relative;
 }
 
 .h3--underline::after {
-  content: '';
-  width: 120%;
-  height: 3px;
-  position: absolute;
-  left: -10%;
-  top: calc(100% + 10px);
-  background: var(--black-a);
+	content: '';
+	width: 120%;
+	height: 3px;
+	position: absolute;
+	left: -10%;
+	top: calc(100% + 10px);
+	background: var(--black-a);
+}
+
+.h3--transparent{
+	color: var(--white-a);
 }
 
 .h4 {
-  font-size: var(--regular-font-size);
-  color: var(--accent-color);
-  font-weight: 700;
-  text-transform: uppercase;
+	font-size: var(--medium-font-size);
+	color: var(--accent-color);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.h4--white{
+	color: var(--white);
+}
+
+.h5{
+	font-size: var(--medium-font-size);
+	color: var(--accent-color);
+	font-weight: 700;
+}
+
+.h6{
+	font-size: var(--medium-font-size);
+	color: var(--black);
+	font-weight: 700;
 }
 
 .p {
-  font-size: var(--regular-font-size);
-  color: var(--black-a);
-  line-height: 1.8;
+	font-size: var(--regular-font-size);
+	color: var(--black-a);
+	line-height: 1.8;
 }
 
+.ul{
+	font-size: var(--medium-font-size);
+	color: var(--black-a);
+	line-height: 1.8;	
+}
+
+.ul--white{
+	color: var(--white);
+}
+
+.img{
+	margin-top: 30px;
+	border: 1px solid var(--accent-color);
+	border-radius: 5px;
+}
+
+.img--rounder-edges{
+	border-radius: 20px;
+}
 .container--small {
-  width: 600px;
+	width: 600px;
 }
 
 .container--medium {
-  width: 900px;
+	width: 900px;
 }
 
 .button-like {
-  background-color: var(--button-bg, var(--accent-color));
-  color: var(--button-color, var(--white));
-  border-radius: 75px;
-  text-transform: uppercase;
-  padding: 15px 30px;
+	background-color: var(--button-bg, var(--accent-color));
+  	color: var(--button-color, var(--white));
+	border-radius: 75px;
+	text-transform: uppercase;
+	padding: 15px 30px;
 }
 
 .button-like--white {
-  --button-bg: transparent;
-  --button-color: var(--black);
-  border: 1px solid var(--black-a);
+  
+	--button-bg: transparent;
+	--button-color: var(--black);
+	border: 1px solid var(--black-a);
 }
 
+.button-more{
+	color: var(--accent-color);
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	background-color: var(--white);
+}
+
+.button-more::after{
+	content: '';
+	position: absolute;
+	width: 88px;
+	height: 3px;
+	background: var(--accent-color);
+	left: 38.5%;
+	top: calc(100% + 10px);
+
+
+}
 .circle {
-  border-radius: 50%;
-  width: var(--circle-dim, 50px);
-  height: var(--circle-dim, 50px);
+	border-radius: 50%;
+	width: var(--circle-dim, 50px);
+	height: var(--circle-dim, 50px);
 }
 
 .line {
-  width: 3px;
-  height: 150px;
-  background-color: var(--line-bg, var(--accent-color));
-  margin: var(--line-height, 40px) auto;
+	width: 3px;
+	height: 150px;
+	background-color: var(--line-bg, var(--accent-color));
+	margin: var(--line-height, 40px) auto;
 }
 
-
+.line--horizontal{
+	width: 35px;
+	height: 3px;
+	background-color: var(--black-a);
+	margin: 30px auto; 
+}
 .navbar__logo {
-  max-height: 40px;
+	max-height: 40px;
 }
 
 .navbar__link {
-  font-size: var(--regular-font-size);
-  color: var(--black);
-  margin: 0 10px;
-  padding: 15px 30px;
-  padding: 15px 30px;
+	font-size: var(--regular-font-size);
+	color: var(--black);
+	margin: 0 10px;
+	padding: 15px 30px;
+	padding: 15px 30px;
 }
 
 .navbar__link:focus,
 .navbar__link:active,
 .navbar__link:hover {
-  color: var(--accent-color);
+	color: var(--accent-color);
 }
 
 .navbar__link--active {
-  background-color: var(--accent-color);
-  color: var(--white);
-  border-radius: 75px;
-  text-transform: uppercase;
+	background-color: var(--accent-color);
+	color: var(--white);
+	border-radius: 75px;
+	text-transform: uppercase;
 }
 
 .navbar__link--active:focus,
 .navbar__link--active:active,
 .navbar__link--active:hover {
-  color: var(--white);
-  text-decoration: none;
+	color: var(--white);
+	text-decoration: none;
+}
+
+.carousel--bg-accent{
+	background-color: var(--accent-color);
+}
+
+.triangle--top{
+	width: 100%;
+	height: 0px;
+	padding-top: 10%;
+	overflow: hidden;
+}
+
+.triangle--top{
+	content: '';
+	display: block;
+	border-top: 50px solid transparent;
+	border-right: 500px solid red;
+border-left: 500px solid transparent;
+border-bottom: 500px solid red;
+		
 }
